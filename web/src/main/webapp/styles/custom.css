@@ -1,0 +1,421 @@
+/* Custom Styles for Banking System */
+
+/* Custom color variables */
+:root {
+    --primary-banking: #1e3a8a;
+    --secondary-banking: #3b82f6;
+    --success-banking: #059669;
+    --warning-banking: #d97706;
+    --danger-banking: #dc2626;
+    --info-banking: #0891b2;
+    --light-banking: #f8fafc;
+    --dark-banking: #1e293b;
+}
+
+.sidebar {
+    min-height: 75vh;
+    background: linear-gradient(135deg, #3B82F6FF 0%, #1E3A8AFF 100%);
+}
+.main-content {
+    background-color: #f8f9fa;
+    min-height: 100vh;
+}
+.card {
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+}
+.card-header {
+    background: linear-gradient(135deg, #3B82F6FF 0%, #1E3A8AFF 100%);
+    color: white;
+    border-radius: 15px 15px 0 0 !important;
+}
+
+/* Banking-specific navbar styling */
+.navbar-banking {
+    background: linear-gradient(135deg, var(--primary-banking) 0%, var(--secondary-banking) 100%) !important;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.navbar-banking .navbar-brand {
+    font-weight: 700;
+    font-size: 1.5rem;
+}
+
+/* Custom card styling */
+.card-banking {
+    border: none;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    border-radius: 12px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card-banking:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
+
+/* Status badges */
+.status-active {
+    color: var(--success-banking);
+    font-weight: 600;
+}
+
+.status-inactive {
+    color: var(--danger-banking);
+    font-weight: 600;
+}
+
+/* User type badges */
+.user-type {
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.user-type-admin {
+    background: linear-gradient(135deg, #dbeafe 0%, #bfdbfe 100%);
+    color: var(--primary-banking);
+    border: 1px solid #93c5fd;
+}
+
+.user-type-user {
+    background: linear-gradient(135deg, #f3e8ff 0%, #e9d5ff 100%);
+    color: #7c3aed;
+    border: 1px solid #c4b5fd;
+}
+
+.user-type-super-admin {
+    background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%);
+    color: #d97706;
+    border: 1px solid #fbbf24;
+}
+
+/* Table styling */
+.table-banking {
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.table-banking thead th {
+    background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+    border-bottom: 2px solid #e2e8f0;
+    font-weight: 600;
+    color: var(--dark-banking);
+    text-transform: uppercase;
+    font-size: 0.75rem;
+    letter-spacing: 0.5px;
+}
+
+.table-banking tbody tr:hover {
+    background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
+}
+
+/* Scrollable table container */
+.table-container {
+    max-height: 600px;
+    overflow-y: auto;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.table-container::-webkit-scrollbar {
+    width: 8px;
+}
+
+.table-container::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 4px;
+}
+
+.table-container::-webkit-scrollbar-thumb {
+    background: linear-gradient(135deg, var(--primary-banking) 0%, var(--secondary-banking) 100%);
+    border-radius: 4px;
+}
+
+.table-container::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(135deg, var(--secondary-banking) 0%, var(--primary-banking) 100%);
+}
+
+/* Sticky table header */
+.table-sticky-header {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+    border-bottom: 2px solid #e2e8f0;
+}
+
+.table-sticky-header th {
+    background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+    border-bottom: 2px solid #e2e8f0;
+    font-weight: 600;
+    color: var(--dark-banking);
+    text-transform: uppercase;
+    font-size: 0.75rem;
+    letter-spacing: 0.5px;
+    padding: 16px 12px;
+}
+
+/* Table row styling for scrollable table */
+.table-scrollable tbody tr {
+    border-bottom: 1px solid #e2e8f0;
+    transition: background-color 0.2s ease;
+}
+
+.table-scrollable tbody tr:hover {
+    background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
+}
+
+.table-scrollable tbody tr:last-child {
+    border-bottom: none;
+}
+
+/* Table cell styling */
+.table-scrollable td {
+    padding: 16px 12px;
+    vertical-align: middle;
+}
+
+/* Button styling */
+.btn-banking-primary {
+    background: linear-gradient(135deg, var(--primary-banking) 0%, var(--secondary-banking) 100%);
+    border: none;
+    color: white;
+    font-weight: 600;
+    padding: 10px 20px;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+.btn-banking-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(30, 58, 138, 0.3);
+    color: white;
+}
+
+.btn-banking-success {
+    background: linear-gradient(135deg, var(--success-banking) 0%, #10b981 100%);
+    border: none;
+    color: white;
+    font-weight: 600;
+    padding: 10px 20px;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+.btn-banking-success:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(5, 150, 105, 0.3);
+    color: white;
+}
+
+/* Form styling */
+.form-control-banking {
+    border: 2px solid #e2e8f0;
+    border-radius: 8px;
+    padding: 12px 16px;
+    transition: all 0.3s ease;
+}
+
+.form-control-banking:focus {
+    border-color: var(--secondary-banking);
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+}
+
+/* Alert styling */
+.alert-banking {
+    border: none;
+    border-radius: 12px;
+    padding: 16px 20px;
+    font-weight: 500;
+}
+
+.alert-banking-success {
+    background: linear-gradient(135deg, #d1fae5 0%, #a7f3d0 100%);
+    color: var(--success-banking);
+    border-left: 4px solid var(--success-banking);
+}
+
+.alert-banking-danger {
+    background: linear-gradient(135deg, #fee2e2 0%, #fecaca 100%);
+    color: var(--danger-banking);
+    border-left: 4px solid var(--danger-banking);
+}
+
+/* Summary cards */
+.summary-card {
+    background: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%);
+    border: 1px solid #e2e8f0;
+    border-radius: 16px;
+    padding: 24px;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.summary-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+
+.summary-card .icon {
+    font-size: 2.5rem;
+    margin-bottom: 16px;
+}
+
+.summary-card .count {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 8px;
+}
+
+.summary-card .label {
+    color: #64748b;
+    font-size: 0.875rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+/* Address cell styling */
+.address-cell {
+    max-width: 200px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    position: relative;
+}
+
+.address-cell:hover::after {
+    content: attr(title);
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--dark-banking);
+    color: white;
+    padding: 8px 12px;
+    border-radius: 6px;
+    font-size: 0.75rem;
+    white-space: nowrap;
+    z-index: 1000;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+/* Loading animation */
+.loading-spinner {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border: 3px solid #f3f3f3;
+    border-top: 3px solid var(--secondary-banking);
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Table info bar */
+.table-info-bar {
+    background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+    border: 1px solid #e2e8f0;
+    border-bottom: none;
+    border-radius: 8px 8px 0 0;
+    padding: 12px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.875rem;
+    color: var(--dark-banking);
+}
+
+.table-info-bar .user-count {
+    font-weight: 600;
+    color: var(--primary-banking);
+}
+
+.table-info-bar .scroll-hint {
+    color: #64748b;
+    font-style: italic;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .table-container {
+        max-height: 400px;
+    }
+    
+    .table-responsive {
+        font-size: 0.875rem;
+    }
+    
+    .btn-group-sm .btn {
+        padding: 0.375rem 0.75rem;
+        font-size: 0.75rem;
+    }
+    
+    .summary-card {
+        margin-bottom: 16px;
+    }
+    
+    .table-info-bar {
+        flex-direction: column;
+        gap: 8px;
+        text-align: center;
+    }
+}
+
+/* Print styles */
+@media print {
+    .btn, .navbar, .alert {
+        display: none !important;
+    }
+    
+    .table-banking {
+        box-shadow: none;
+        border: 1px solid #000;
+    }
+    
+    .card-banking {
+        box-shadow: none;
+        border: 1px solid #000;
+    }
+    
+    .table-container {
+        max-height: none;
+        overflow: visible;
+    }
+} 
+
+.table-scrollable {
+  display: block;
+  max-height: 400px;
+  overflow-y: auto;
+  width: 100%;
+}
+.table-scrollable thead, .table-scrollable tbody, .table-scrollable tr, .table-scrollable th, .table-scrollable td {
+  display: table;
+  width: 100%;
+  table-layout: fixed;
+}
+.table-scrollable thead {
+  width: 100%;
+  table-layout: fixed;
+  position: sticky;
+  top: 0;
+  z-index: 2;
+  background: #212529;
+  color: #fff;
+} 
+
+.table-vertical-scroll {
+  max-height: 400px;
+  overflow-y: auto;
+} 

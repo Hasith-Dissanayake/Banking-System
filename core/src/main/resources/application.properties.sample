@@ -1,0 +1,5 @@
+mailtrap.host=sandbox.smtp.mailtrap.io
+mailtrap.port=2525
+mailtrap.username=YOUR_USERNAME_HERE
+mailtrap.password=YOUR_PASSWORD_HERE
+app.email=info@bankingsystem.com
